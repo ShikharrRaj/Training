@@ -1,4 +1,3 @@
-package java;
 
 import java.util.Scanner;
 
@@ -9,23 +8,28 @@ public class Userinfo {
     public String place;
     protected int age;
     private String position;
-   
-    
-    
+
+    public static void main(String[] args) {
+        Userinfo obj1 = new Userinfo();
+        obj1.createuser();
+        obj1.displayUserinfo();
+
+    }
+
     public void createuser(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter details");
-        System.out.println("Name");
+        System.out.println("Name:");
         name = scan.next();
-        System.out.println("userid");
+        System.out.println("userid:");
         userid= scan.nextInt();
-        System.out.println("companyname");
+        System.out.println("companyname:");
         companyname=scan.next();
-        System.out.println("age");
+        System.out.println("age:");
         age=scan.nextInt();
-        System.out.println("position");
+        System.out.println("position:");
         position=scan.next();
-        System.out.println("place");
+        System.out.println("place:");
         place=scan.next();
 
     }
@@ -37,10 +41,5 @@ public class Userinfo {
         System.out.println("age" +age);
         System.out.println("position:" +position);
     }
-    public static void main(String[] args) {
-        Userinfo obj1 = new Userinfo();
-        obj1.createuser();
-        obj1.displayUserinfo();
 
-    }
 }
