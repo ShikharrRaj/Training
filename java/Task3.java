@@ -5,13 +5,15 @@ public class Task3 {
     private int UserID;
     private String Position;
     protected  int age;
+    public String place;
     // constructor Overloaded here
-    public Task3(String name, String company, int UserID, String Position, int age) {
+    public Task3(String name, String company, int UserID, String Position, int age, String place) {
         this.name = name;
         this.company = company;
         this.UserID = UserID;
         this.Position = Position;
         this.age = age;
+        this.place=place;
     }
     Task3(String name,int UserID)
     {
@@ -34,6 +36,7 @@ public class Task3 {
         System.out.println("User Id : "+UserID);
         System.out.println("Position :"+Position);
         System.out.println("Age : " +age);
+        System.out.println("place : " +place);
 
 
     }
@@ -55,8 +58,10 @@ public class Task3 {
         String Position=sc.next();
         System.out.println("Enter age");
         int age=sc.nextInt();
+        System.out.println("Enter place");
+        String place = sc.next();
 
-        Task3 User1= new Task3( name, company, UserID, Position,  age);
+        Task3 User1= new Task3( name, company, UserID, Position,  age, place);
         Task3 User2= new Task3( name, UserID);
         Task3 User3= new Task3( );
         User1.Display();    //here user will display all parameter as it is passed .
