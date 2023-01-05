@@ -1,0 +1,24 @@
+  creat 3 class
+    college
+        collegename
+        collegeid
+        collegeplace
+    branch
+        branchName
+        branchId
+        branchTotalStaff
+    student
+        studentname
+        studentplace
+        studentid
+ 
+        showStudentdetail
+        {
+            showAlldeatils(studentdetail+collegename+branchname)
+        }
+        showcollege{
+            collegedetail
+        }
+        showbrachdetails{
+            branchdetail
+        }
