@@ -11,9 +11,13 @@ public class bankbranch extends bankMain{
     private float branchIntr;
 
 
-    public bankbranch(String bankname, int banktotalfund, float bankInt, long banktotalfound, float bankInt2,
+    public bankbranch(String bankname, int banktotalfund, float bankInt, long bankphno, float bankInt2,
                       String branchname, int branchid, long branchphno, int branchtotalfund, float branchIntr) {
-        super(bankname, banktotalfund, bankInt, banktotalfound, bankInt2);
+        super(bankname,2,bankphno,banktotalfund, bankInt2);
+        super.bankname = bankname;
+
+        super.bankid = bankid;
+        super.bankphno= bankphno;
         this.branchname = branchname;
         this.branchid = branchid;
         this.branchphno = branchphno;
