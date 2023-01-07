@@ -1,0 +1,30 @@
+task1   
+    =>Scenario
+        =>comapany Retail shop
+            =>selling the products
+                =>cosmetics =>10000
+                =>perfume =>5000
+                =>clothes => 7000
+            tax for each products
+                cosmetics tax will be 7%
+                perfume tax will imported 12%
+                clothes tax will be 4%
+                total cost discount 2%
+            in that user cosmetics
+                    cosmetics number of cosmetics user by
+                    qty*(1000+10%)=>cosmetics
+                    perfume number of perfume user by
+                        qty*(5000+%12)=>total prize
+                    clothes number of clothes user by
+                        qty*(7000+%4)=>total prize
+            what is the total prize discount for by the user sum of all three product
+                    discount amout total cost 2% discount
+
+ 
+
+                using interface implement
+                    public interface Retail{
+                        getTotalcost(tax,cost,number);
+                        getTotalextendedcost(cosmetics,perfume,clothes);
+                        getTotalDiscount(totalcost);
+                    }
