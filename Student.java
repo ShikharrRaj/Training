@@ -36,7 +36,7 @@ public class Student{
             if(s!=null){
         System.out.println("Enter student name:" + s.name);
         System.out.println("Enter student age:"+ s.age);
-        System.out.println("Enter student place" + s.place);
+        System.out.println("Enter student place:" + s.place);
         System.out.println("Enter student college:" + s.college);
         }
     }
