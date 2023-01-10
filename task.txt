@@ -1,0 +1,18 @@
+create class bank parent
+name
+id
+phno
+private bankTotalfound
+private bankIntrest
+creat banck branch
+name
+id
+phno
+private branchTotalfound
+private branchIntrest
+Userjnfo
+Name
+Loan_amount
+Call the user
+
+method loan
