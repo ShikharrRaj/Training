@@ -1,0 +1,34 @@
+
+Create class called demo
+Store object of that class inside arraylist
+Perform arraylist operations on that 
+
+task on hash map
+        =>create class student
+            =>name
+            =>rollno
+            =>collage
+            =>place
+            =>branch
+            =>some
+
+        class helperClass
+           HashMap<String,Student> StudentMap//store all student object inside this map
+            =>addStudent()
+                =>this help you to create student object take student details add that student object inside HashMap
+                using student rollno as key
+            =>serchStudet()
+                take student rollno as key using search is student is present in map if there print student details
+            =>deletestudent()
+                take rollno and delete student
+        main(){
+            while(true){
+                switch(case){
+                    case 1:addStudent()
+                    case 2:serach();
+                    case 3 :deletestudent();
+                    case 4:exit();
+                }
+            }
+        }
+
