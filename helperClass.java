@@ -2,59 +2,83 @@ import java.security.KeyStore.Entry;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class helperClass extends student {
+public class helperClass  {
    Scanner sc=new Scanner(System.in);
         HashMap<Integer, student> studentMap = new HashMap<Integer, student>();
+        private Object map;
+        
 
         public void addstudent(){
-            student std = new student();
             System.out.println("Enter Student Name:");
-            std.name=sc.next();
+            String name=sc.next();
             System.out.println("Enter Student Roll no:");
-            std.rollno=sc.nextInt();
+            int rollno=sc.nextInt();
             System.out.println("Enter Student College Name:");
-            std.college=sc.next();
+            String college=sc.next();
             System.out.println("Enter Student Place Name:");
-            std.place=sc.next();
-            std.college=sc.next();
+            String place=sc.next();
             System.out.println("Enter Student Branch Name:");
-            std.branch=sc.next();
+            String branch=sc.next();
+            System.out.println("Enter Student Sem:");
+            int sem=sc.nextInt();
+            while(((HashMap<Integer, student>) this.map).containsKey(rollno)){
+                System.out.println("Roll no is not unique");
+                System.out.println("Enter new roll no");
+                rollno=sc.nextInt();
+            }
+            student std = new student(name, rollno, college, place, branch, sem);
             studentMap.put(std.rollno, std);
+
             
         
         }
 
        public void searchStudent(){
             System.out.println("Enter Student Roll Number to Search:");
-            int i=sc.nextInt(rollno);
-            System.out.println(studentMap.get(i));
-            for(java.util.Map.Entry<Integer, student> s: studentMap.entrySet()){            
-            if(i==s.getKey())
-            {
-                System.out.println("Student found:");
-                System.out.println("Student Name:" +s.getValue().name);
-                System.out.println("Student Roll no:" +s.getValue().rollno);
-                System.out.println("Student College:"+s.getValue().college);
-                System.out.println("Student Place:" +s.getValue().place);
-                
+            int rollno=sc.nextInt();
+            if(((HashMap<Integer, student>) this.map).containsKey(rollno)){
+                ((HashMap<Integer, student>) this.map).get(rollno).display();
+            }else{
+                System.out.println("roll no is not present");
             }
-
-            
-        }
+           
     }
                 public void deleteStudent(){
+                    System.out.println("Enter student roll no to delete");
+                    int rollno=sc.nextInt();
+                    student std= ((HashMap<Integer, student>) this.map).remove(rollno);
+                    if(std!=null){
+                        System.out.println("delete student details");
+                        std.display();
+                    }else{
+                        System.out.println("roll no not found in list");
+                    }
+                }
+
+                void updatestudent(){
+                    System.out.println("enter student roll no to update");
+                    int rollno=sc.nextInt();
+                    if(((HashMap<Integer, student>) this.map).containsKey(rollno)){
+                        student std=((HashMap<Integer, student>) this.map).get(rollno);
+                        ((HashMap<Integer, student>) this.map).replace(rollno,std);
+                    }else{
+                        System.out.println("roll no not found");
+                    }
 
                 }
           
             
                 public static void main(String args[]){
-                student std =new student();
+                    helperClass std = new helperClass();
                 System.out.println("Enter student name:");
                 String s= std.sc.next();
                 System.out.println("Enter student Roll No:");
                 int r= std.sc.nextInt();
                 System.out.println("Enter student college name:");
                 String c= std.sc.next();
+                System.out.println("Enter student place name:");
+                String p= std.sc.next();
+                
                 while(true){
                 System.out.println("Enter Case\n 1:Add Student\n 2:Search Student\n 3:Delete Student\n 4:exit");
                 int choice =std.sc.nextInt();
