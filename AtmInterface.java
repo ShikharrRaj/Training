@@ -1,12 +1,9 @@
 package JavaProject;
 
- public interface AtmInterface{
+public interface AtmInterface {
+    Customer deposit(Customer customer);
 
-    void deposit();
+    Customer withdraw(Customer customer);
 
-    void withdraw();
-
-    void checkBalance();
-    
-    
+    Customer checkBalance(Customer customer);
 }
