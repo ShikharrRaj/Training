@@ -6,19 +6,19 @@ fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
 }
 //create class ticket
-//from
-//to
-//date
-//time
-//cost
-//preference
-//seatno
+ //from
+ //to
+ //date
+ //time
+ //cost
+ //preference
+ //seatno
 //customer class
-//name
-//age
-//place
+ //name
+ //age
+ //place
 //bookin class
-//customer deatils
-//CUSTOMER LIST
-//booking details
+ //customer deatils
+ //CUSTOMER LIST
+ //booking details
 //show the perticular booking details
