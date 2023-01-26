@@ -1,0 +1,7 @@
+use Demo
+db.createCollection('Demo')
+db.Demo.insertOne({name:'shikhar',address:[{street:'jv road',city:'kharghar',pin:410210},{street:'jv road',city:'kharghar'}],company:['axis'],bank:[{bankname:'axis',account_id:12345,balance:10000}]})
+db.Demo.insertOne({name:'saket',address:[{street:'ahemd road',city:'parel',pin:432210},{street:'ahmed road',city:'parel'}],company:['axis'],bank:[{bankname:'axis',account_id:56789,balance:1000}]})
+db.Demo.insertOne({name:'vishal',address:[{street:'kv road',city:'powai',pin:400084},{street:'kv road',city:'powai'}],company:['axis'],bank:[{bankname:'axis',account_id:12123,balance:5000}]})
+db.Demo.insertOne({name:'varun',address:[{street:'svk road',city:'colaba',pin:412454},{street:'svk road',city: 'colaba'}],company:['axis'],bank:[{bankname:'axis',account_id:54123,balance:7000}]})
+db.Demo.find({bank:{$elemMatch:{account_id:54123}}})
