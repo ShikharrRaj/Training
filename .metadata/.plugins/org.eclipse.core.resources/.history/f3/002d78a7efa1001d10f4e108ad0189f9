@@ -1,0 +1,26 @@
+package com.axis;
+
+public class Employee {
+	
+	int id;
+	String name;
+	Address Address;
+	
+	public void setid(int id) {
+		this.id=id;
+	}
+	
+	public void setName(String name) {
+		this.name=name;
+	}
+	public void setAddress(String address) {
+		this.Address=Address;
+	}
+	
+	public void displayEmployeeInfo() {
+		System.out.println("id:"+id);
+		System.out.println("name:"+name);
+		System.out.println("Address:"+Address);
+	}
+
+}
